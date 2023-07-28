@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <nav className="mx-[128px]  relative z-10 flex  justify-between px-5 py-5 sm:px-0">
+        <nav className="md:mx-[128px]  relative z-10 flex  justify-between px-5 py-5 sm:px-0">
             <img src="/logo-white.svg" alt="Dukaan logo" />
             <div className="flex items-center">
                 <button className="mr-8 text-white transition-all text-[18px] hover:underline">

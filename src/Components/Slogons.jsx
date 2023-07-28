@@ -51,7 +51,7 @@ const Slogons = () => {
       <SlogonSearch updateGeneratedSlogon={updateGeneratedSlogon} />
       <div className='h-[1px] mt-[50px] w-full bg-black-extraLight'></div>
       <div className='flex items-center mt-12 flex-col justify-between gap-y-6 md:flex-row'>
-        <span className='text-xl text-black-dark'>
+        <span className='text-xl md:text-start text-center text-black-dark'>
           We have generated 1,023 slogans for “{generatedSlogon}”
         </span>
 
@@ -90,7 +90,7 @@ const Slogons = () => {
         <div>
           {[...Array(data.length / 20)].map((_, index) => {
             return (
-              <span onClick={() => selectPageHandler(index + 1)} className={` ${page === index + 1 ? "bg-[#146eb4] px-[5px] py-[5px] text-white rounded-full" : "text-[#146eb4]"}   text-[18px] hover:cursor-pointer ml-[22px]`} key={index}>{index + 1}</span>
+              <span onClick={() => selectPageHandler(index + 1)} className={` ${page === index + 1 ? "bg-[#146eb4] px-[5px] py-[5px] text-white rounded-full" : "text-[#146eb4]"}   text-[18px] hover:cursor-pointer md:ml-[22px] ml-[17px]`} key={index}>{index + 1}</span>
             )
           })}
         </div>
@@ -130,7 +130,7 @@ const SlogonSearch = ({ updateGeneratedSlogon }) => {
   return (
     <div>
       <div>
-        <div className='flex flex-col max-w-[40%] relative'>
+        <div className='flex flex-col md:max-w-[40%] max-w-full relative'>
           <label className='mb-2 text-[18px] font-medium text-black-light' htmlFor="text"> Word for your slogon</label>
           <input className='w-full rounded border border-black-extraLight  px-4 py-3 text-[18px] placeholder:leading-6 focus:border-primary focus:outline-none' value={slogon} onChange={onChangeHandler} type="text" placeholder='Enter something'
           />
@@ -143,7 +143,7 @@ const SlogonSearch = ({ updateGeneratedSlogon }) => {
         </div>
         <button
           onClick={generateSlogan}
-          type='submit' disabled={!slogon} className='rounded px-2 py-1 mt-12  text-xs font-medium transition-all disabled:cursor-not-allowed disabled:opacity-70 sm:px-5 sm:py-2 sm:text-lg bg-primary text-white hover:bg-primary/90'>Generate Slogon</button>
+          type='submit' disabled={!slogon} className='rounded px-6 py-3 mt-12  text-md font-medium transition-all disabled:cursor-not-allowed disabled:opacity-70 sm:px-5  sm:py-2 sm:text-lg bg-primary text-white hover:bg-primary/90'>Generate Slogon</button>
       </div>
     </div>
   )

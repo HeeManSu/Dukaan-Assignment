@@ -17,8 +17,8 @@ const Tooltip = ({ children, direction, text, onLeave }) => {
                     className={clsx(
                         'absolute whitespace-nowrap rounded-md bg-black-light px-2 py-1 text-sm font-medium text-white',
                         {
-                            '-left-4 -translate-x-full': direction === 'left',
-                            '-right-4 translate-x-full': direction === 'right',
+                            'md:-left-4 left-8 md:bottom-0 bottom-14 -translate-x-full': direction === 'left',
+                            'md:-right-4 right-8 md:bottom-0 bottom-14 translate-x-full': direction === 'right',
                         }
                     )}>
                     {text}

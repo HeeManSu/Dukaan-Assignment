@@ -15,12 +15,12 @@ function App() {
         <div className='absolute left-0 right-0 top-0 z-0 h-80 bg-primary '>
           <Navbar />
           <div className="relative pt-12">
-            <div className="mx-[128px] rounded-lg bg-white shadow-subtle">
-              <section className=" mx-auto max-w-[50rem] px-1 py-16">
-                <h1 className="mb-4 text-4xl font-bold leading-10 text-black-dark">
+            <div className="md:mx-[128px] mx-4 rounded-lg bg-white shadow-subtle">
+              <section className=" mx-auto max-w-[50rem] xl:px-0 md:px-10 px-3 py-16">
+                <h1 className="mb-4 md:text-4xl text-3xl font-bold leading-10 text-black-dark">
                   Free Slogan Maker
                 </h1>
-                <p className="mb-6 text-xl font-normal text-black-light">
+                <p className="mb-6 md:text-xl text-md font-normal text-black-light">
                   Simply enter a term that describes your business, and get up to 1,000
                   relevant slogans for free.
                 </p>
@@ -50,10 +50,10 @@ function App() {
                 Try our other free products
               </h2>
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-                {toolsData.map((tool) => (
-                  <div>
+                {toolsData.map((tool, index) => (
+                  <div key={index} >
                     <img className='w-full' src={tool.image} alt={tool.label} />
-                    <span n className="mt-4 inline-block text-xl font-medium text-black-dark">
+                    <span  className="mt-4 inline-block text-xl font-medium text-black-dark">
                       {tool.label}
                     </span>
                     <p className="mt-1 text-black-light">{tool.description}</p>
