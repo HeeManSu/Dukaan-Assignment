@@ -109,7 +109,7 @@ const Slogons = () => {
 export default Slogons
 
 const SlogonSearch = ({ updateGeneratedSlogon }) => {
-  const [slogon, setSlogon] = useState('something');
+  const [slogon, setSlogon] = useState('');
   const [showClearIcon, setShowClearIcon] = useState(false);
 
   const onChangeHandler = (event) => {
